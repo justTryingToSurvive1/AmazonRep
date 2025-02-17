@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+header {
+    width: 100vw;
+    overflow-x: auto;
+}
+
+.navbar-dark .nav-item .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-dark .nav-item .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 0.25rem;
+    color: #fff;
+  }
+  
+  .fa-li {
+    position: relative;
+    left: 0;
+  }
+  .options-container {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+  .toggle-container {
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    margin: 0 auto;
+    /* height: 100%; */
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .toggle-content {
+    display: none; /* Hidden by default */
+    background-color: #f8f9fa; /* Light background for content */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Space between content and "See all" */
+  }
+
+  .toggle-link {
+    cursor: pointer;
+    color: #007bff; /* Bootstrap primary color */
+    text-decoration: none;
+    display: block; /* Ensure it's on a new line */
+    text-align: center; /* Center the text */
+    margin-top: 10px; /* Space above the link */
+  }
+
+  .toggle-link:hover {
+    text-decoration: underline;
+  }
+
+  .toggle-link i {
+    margin-left: 5px;
+    transition: transform 0.3s ease; /* Smooth rotation */
+  }
+
+  .toggle-link.active i {
+    transform: rotate(180deg); /* Rotate chevron when active */
+  }
+
+  .dropdown-option {
+    margin-bottom: 10px;
+  }
+
+  .dropdown-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #e9ecef; /* Light gray background */
+    border-radius: 4px;
+  }
+
+  .dropdown-header i {
+    transition: transform 0.3s ease; /* Smooth rotation */
+  }
+
+  .dropdown-header.active i {
+    transform: rotate(90deg); /* Rotate chevron when active */
+  }
+
+  .dropdown-items {
+    display: none; /* Hidden by default */
+    padding-left: 20px; /* Indent items */
+    margin-top: 5px;
+  }
+
+  .dropdown-items.show {
+    display: block; /* Show items when active */
+  }
+
+  .dropdown-items li {
+    list-style-type: none; /* Remove bullet points */
+    padding: 5px 0;
+  }
+  hr {
+      border: 0;
+      border-top: 4px solid #aaa;
+  }
