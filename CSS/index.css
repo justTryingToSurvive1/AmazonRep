@@ -14,101 +14,256 @@ header {
 
 .navbar-dark .nav-item .nav-link {
     color: #fff;
-  }
+}
   
-  .navbar-dark .nav-item .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    border-radius: 0.25rem;
-    color: #fff;
-  }
-  
-  .fa-li {
-    position: relative;
-    left: 0;
-  }
-  .options-container {
-    display: flex;
-    white-space: nowrap;
-    overflow-x: scroll;
-  }
-  .toggle-container {
-    width: 100%;
-    max-width: 300px; /* Adjust as needed */
-    margin: 0 auto;
-    /* height: 100%; */
-    max-height: 200px;
-    overflow-y: auto;
-  }
+.navbar-dark .nav-item .nav-link:hover {
+background-color: rgba(255, 255, 255, 0.1);
+transition: all 0.3s ease;
+border-radius: 0.25rem;
+color: #fff;
+}
 
-  .toggle-content {
-    display: none; /* Hidden by default */
-    background-color: #f8f9fa; /* Light background for content */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px; /* Space between content and "See all" */
-  }
+.fa-li {
+position: relative;
+left: 0;
+}
+.options-container {
+display: flex;
+white-space: nowrap;
+overflow-x: scroll;
+}
+.options-container::-webkit-scrollbar {
+display: none;
+}
+.toggle-container {
+width: 100%;
+max-width: 300px; /* Adjust as needed */
+margin: 0 auto;
+/* height: 100%; */
+max-height: 200px;
+overflow-y: auto;
+}
 
-  .toggle-link {
-    cursor: pointer;
-    color: #007bff; /* Bootstrap primary color */
-    text-decoration: none;
-    display: block; /* Ensure it's on a new line */
-    text-align: center; /* Center the text */
-    margin-top: 10px; /* Space above the link */
-  }
+.toggle-content {
+display: none; /* Hidden by default */
+background-color: #f8f9fa; /* Light background for content */
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 4px;
+margin-bottom: 10px; /* Space between content and "See all" */
+}
 
-  .toggle-link:hover {
-    text-decoration: underline;
-  }
+.toggle-link {
+cursor: pointer;
+color: #007bff; /* Bootstrap primary color */
+text-decoration: none;
+display: block; /* Ensure it's on a new line */
+text-align: center; /* Center the text */
+margin-top: 10px; /* Space above the link */
+}
 
-  .toggle-link i {
-    margin-left: 5px;
-    transition: transform 0.3s ease; /* Smooth rotation */
-  }
+.toggle-link:hover {
+text-decoration: underline;
+}
 
-  .toggle-link.active i {
-    transform: rotate(180deg); /* Rotate chevron when active */
-  }
+.toggle-link i {
+margin-left: 5px;
+transition: transform 0.3s ease; /* Smooth rotation */
+}
 
-  .dropdown-option {
-    margin-bottom: 10px;
-  }
+.toggle-link.active i {
+transform: rotate(180deg); /* Rotate chevron when active */
+}
 
-  .dropdown-header {
-    cursor: pointer;
+.dropdown-option {
+margin-bottom: 10px;
+}
+
+.dropdown-header {
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px;
+background-color: #e9ecef; /* Light gray background */
+border-radius: 4px;
+}
+
+.dropdown-header i {
+transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.dropdown-header.active i {
+transform: rotate(90deg); /* Rotate chevron when active */
+}
+
+.dropdown-items {
+display: none; /* Hidden by default */
+padding-left: 20px; /* Indent items */
+margin-top: 5px;
+}
+
+.dropdown-items.show {
+display: block; /* Show items when active */
+}
+
+.dropdown-items li {
+list-style-type: none; /* Remove bullet points */
+padding: 5px 0;
+}
+hr {
+    border: 0;
+    border-top: 4px solid #aaa;
+}
+#clOse {
+    background-color: #fff;
+    position: fixed;
+    top: 20px;
+    left: 415px;
+}
+
+.offcanvas-body .dropdown-container {
+    /* width: 300px; */
+    width: inherit;
+    /* margin: 20px; */
+    /* background-color: red; */
+}
+.dropdown-itemm {
+    border: 1px solid #ccc;
     display: flex;
     align-items: center;
+    padding-right: 20px;
     justify-content: space-between;
-    padding: 5px;
-    background-color: #e9ecef; /* Light gray background */
-    border-radius: 4px;
-  }
+    background-color: green;
+    position: relative;
+}
+.chevron {
+    font-size: 35px;
+    vertical-align: middle;
+    color: #7b7b7b;
+}
+.dropdown-content {
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 100%;
+    width: 200px;
+    padding: 20px 0 0 0;
+    display: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-10px);
+    transition: transform 0.3s ease-in-out;
+}
+.dropdown-content p {
+    margin-left: 5px;
+}
+.dropdown-content.open {
+    display: block;
+    transform: translateX(0);
+}
+.close-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 16px;
+}
+section {
+    padding: 0 20px;
+    background-color: #E3E6E6;
+    
+    /* position: relative; */
+}
+.dwn {
+    /* position: relative; */
+    height: 100%;
+}
+#sec1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0 20px;
+    /* background-color: transparent; */
+    background: linear-gradient(55deg, transparent, #E3E6E6);
+    position: relative;
+    top: -300px;
+    right: 0;
+    width: 100%;
+    /* background-color: blue; */
+}
+#sec1 .ch h3 {
+    font-size: 1.3rem;
+    font-weight: 750;
+}
+#sec1 span {
+    font-weight: 500;
+    font-size: 1rem;
+}
+#sec1 .ch{
+    background-color: #fff;
+    margin: 0 10px 10px 10px;
+    padding: 22px 20px;
+}
 
-  .dropdown-header i {
-    transition: transform 0.3s ease; /* Smooth rotation */
-  }
+.ch .sec1-2-1-image,.sec1-2-2-image,.sec1-2-3-image,.sec1-2-4-image {
+    width: 100%;
+    height: 100px;
+}
+.ch .sec1-3-1-image {
+    width: 100%;
+    height: 160px;
+}
+.sec-1-3-2-image,.sec1-3-3-image,.sec1-3-4-image {
+    width: 100%;
+    height: 70px;
+}
+.ch .mv {
+    color: #007bff;
+    position: relative;
+    bottom: -20px;
+    display: block;
+}
+.sec1-1-1 {
+    background-image: url(/MULTIMEDIA/Images/Fuji_Gaming_store_Dashboard_card_2x_EN._SY608_CB564799420_.jpg);
+    width: 100%;
+    height: 80%;
+    background-position: center;
+    background-size: cover;
+}
+.sec1-3-1 {
+    background-image: url(/MULTIMEDIA/Images/cooker.jpg);
+    width: 100%;
+    height: 40%;
+    background-position: center;
+    background-size: cover;
+}
+.sec1-4-1 {
+    background-image: url(/MULTIMEDIA/Images/officepro.jpg);
+    width: 100%;
+    height: 80%;
+    background-position: center;
+    background-size: cover;
+}
+.sec1-7-1 {
+    background-image: url(/MULTIMEDIA/Images/toy.jpg); 
+    width: 100%; 
+    height: 80%; 
+    background-size: cover; 
+    background-position: center;
+}
 
-  .dropdown-header.active i {
-    transform: rotate(90deg); /* Rotate chevron when active */
-  }
 
-  .dropdown-items {
-    display: none; /* Hidden by default */
-    padding-left: 20px; /* Indent items */
-    margin-top: 5px;
-  }
 
-  .dropdown-items.show {
-    display: block; /* Show items when active */
-  }
 
-  .dropdown-items li {
-    list-style-type: none; /* Remove bullet points */
-    padding: 5px 0;
-  }
-  hr {
-      border: 0;
-      border-top: 4px solid #aaa;
-  }
+
+
+
+
+
+
+/**===========================**/
+@media (min-width: 992px) {
+    .options-container {
+        display: block;
+        /* transform: translateY(50px); */
+    }
+}

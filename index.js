@@ -1,11 +1,23 @@
-// import Hammer from "hammer.js";
-// const hammer = new Hammer(document.querySelector('.options-container'));
-// hammer.on('swipeleft', () => {
-//     document.querySelector('.options-container').scrollLeft += 100;
-// });
-// hammer.on('swiperight', () => {
-//     document.querySelector('.options-container').scrollLeft -= 100;
-// });
+// Import Hammer.js
+import Hammer from 'hammerjs';
+
+// Create a new Hammer instance
+const hammer = new Hammer(document.querySelector('.options-container'));
+
+// Subscribe to swipe events
+hammer.on('swipeleft', () => {
+  const optionsContainer = document.querySelector('.options-container');
+  const currentScrollLeft = optionsContainer.scrollLeft;
+  const newScrollLeft = currentScrollLeft + 100;
+  optionsContainer.scrollLeft = newScrollLeft;
+});
+
+hammer.on('swiperight', () => {
+  const optionsContainer = document.querySelector('.options-container');
+  const currentScrollLeft = optionsContainer.scrollLeft;
+  const newScrollLeft = currentScrollLeft - 100;
+  optionsContainer.scrollLeft = newScrollLeft;
+});
 
 
 
@@ -36,3 +48,31 @@
      header.classList.add('active');
    }
  }
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const dropdownItems = document.querySelectorAll(".dropdown-itemm");
+
+    dropdownItems.forEach((item) => {
+        const chevron = item.querySelector(".chevron");
+        const dropdownContent = item.querySelector(".dropdown-content");
+        const closeIcon = item.querySelector(".close-icon");
+
+        // open dropdown on chevron click
+        chevron.addEventListener("click", (e) => {
+            // prevent event bubbling
+            e.stopPropagation(); 
+            dropdownContent.classList.add("open");
+        });
+        // close dropdown on close icon click
+        closeIcon.addEventListener("click", (e) => {
+            e.stopPropagation();
+            documentContent.classList.remove("open");
+        });
+        // close dropdown hen clicking outside
+        document.addEventListener("click", (e) => {
+            if (!item.contains(e.target)){
+                dropdownContent.classList.remove("open");
+            }
+        });
+    });
+ });
