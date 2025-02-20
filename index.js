@@ -1,23 +1,23 @@
 // Import Hammer.js
-import Hammer from 'hammerjs';
+// import Hammer from 'hammerjs';
 
-// Create a new Hammer instance
-const hammer = new Hammer(document.querySelector('.options-container'));
+// // Create a new Hammer instance
+// const hammer = new Hammer(document.querySelector('.options-container'));
 
-// Subscribe to swipe events
-hammer.on('swipeleft', () => {
-  const optionsContainer = document.querySelector('.options-container');
-  const currentScrollLeft = optionsContainer.scrollLeft;
-  const newScrollLeft = currentScrollLeft + 100;
-  optionsContainer.scrollLeft = newScrollLeft;
-});
+// // Subscribe to swipe events
+// hammer.on('swipeleft', () => {
+//   const optionsContainer = document.querySelector('.options-container');
+//   const currentScrollLeft = optionsContainer.scrollLeft;
+//   const newScrollLeft = currentScrollLeft + 100;
+//   optionsContainer.scrollLeft = newScrollLeft;
+// });
 
-hammer.on('swiperight', () => {
-  const optionsContainer = document.querySelector('.options-container');
-  const currentScrollLeft = optionsContainer.scrollLeft;
-  const newScrollLeft = currentScrollLeft - 100;
-  optionsContainer.scrollLeft = newScrollLeft;
-});
+// hammer.on('swiperight', () => {
+//   const optionsContainer = document.querySelector('.options-container');
+//   const currentScrollLeft = optionsContainer.scrollLeft;
+//   const newScrollLeft = currentScrollLeft - 100;
+//   optionsContainer.scrollLeft = newScrollLeft;
+// });
 
 
 
@@ -49,7 +49,7 @@ hammer.on('swiperight', () => {
    }
  }
 
- document.addEventListener("DOMContentLoaded", function () {
+//  document.addEventListener("DOMContentLoaded", function () {
     const dropdownItems = document.querySelectorAll(".dropdown-itemm");
 
     dropdownItems.forEach((item) => {
@@ -75,4 +75,21 @@ hammer.on('swiperight', () => {
             }
         });
     });
- });
+//  });
+
+    const contentWrap = document.querySelector('.wra');
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const scrollAmount = 500;
+    prevButton.addEventListener('click', () => {
+        contentWrap.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth',
+        });
+    });
+    nextButton.addEventListener('click', () => {
+        contentWrap.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth',
+        });
+    });
