@@ -168,10 +168,19 @@ hr {
     left: 5px;
     font-size: 16px;
 }
-section {
+section:not(.end) {
     background-color: #e7f0f0;
     margin: 40px 0;
     position: relative;
+}
+.end {
+    border: .2px solid #d2d2d2;
+    border-left: none;
+    border-right: none;
+    padding: 30px 50px;
+    align-items: center;
+    margin: 20px 0;
+
 }
 .dwn {
     width: 100%;
@@ -192,15 +201,22 @@ section {
 main h3 {
     font-size: 1.3rem;
     font-weight: 750;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 #sec1 span {
     font-weight: 500;
     font-size: 1rem;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
 }
 .ch{
     background-color: #fff;
     margin: 10px;
-    padding: 22px 20px;
+    padding: 22px 18px;
 }
 
 .ch .sec1-2-1-image,.sec1-2-2-image,.sec1-2-3-image,.sec1-2-4-image {
@@ -254,12 +270,15 @@ main h3 {
     position: relative;
     background-color: #fff;
     padding: 10px;
+    margin: 0 20px;
 }
-#sec3,#sec5,#sec6 {
+#sec3,#sec5,#sec6,#sec7,#sec8,#sec10 {
     width: 100%;
     position: relative;
     background-color: #fff;
-    margin-top: 20px;
+    margin: 20px 20px 0 20px;
+
+    padding: 10px 0;
 }
 .wra {
     display: flex;
@@ -311,12 +330,239 @@ main h3 {
 .next-button {
     right: 0;
 }
-#sec4 {
+#sec4,#sec7 {
     display: flex;
     background-color: transparent;
     margin: 10px ;
 }
+#sec9 .sec9-- {
+    background-color: #fff;
+    margin: 20px 0;
+    width: inherit;
+    height: inherit;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.sec9-- h3 {
+    margin: 10px;
+}
 
+.mov {
+    margin: 15px 0;
+    font-weight: 500;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #007bff;
+    cursor: pointer;
+}
+.sid {
+    display: flex;
+    gap: 20px;
+    background-color: transparent;
+    width: 100%;
+    justify-content: center;
+    /* padding: 0 20px; */
+}
+#sec9 .sec9-- .sec9-1 {
+    background-image: url(../MULTIMEDIA/Images/Gaming_zone_2x._SY608_CB540253513_.jpg);
+    width: 100%;
+    height: 80%;
+    background-position: center;
+    background-size: cover;
+}
+#sec9 .sec9-- .sec9-2 {
+    background-image: url(/MULTIMEDIA/Images/oralB.jpg);
+    height: 80%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.pic-cov {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 30px;
+}
+.pic-cov img {
+    width: inherit;
+    height: inherit;
+}
+.sec9-- .d-fl {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    gap: 15px;
+    background-color: #fff;
+}
+#sec10 {
+    /* margin-bottom: 100px; */
+}
+#sec11 {
+    background-color: #f00;
+    margin: 20px 0;
+    width: 100%;
+}
+#sec11 .sec11-- {
+    border: .5px solid #ccc;
+    border-left: none;
+    border-right: none;
+    margin: 30px 0;
+}
+
+.view {
+    color: #0d0db7;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    cursor: pointer;
+    line-height: .7rem;
+}
+.gr {
+    margin-left: -12px;
+    font-size: 1.2em;
+}
+footer button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: #303f50;
+}
+footer button a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+footer button:hover {
+    background-color: #485769;
+}
+footer button:hover a {
+    text-decoration: none;
+}
+.footer {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #232F3E;
+    border-bottom: thin solid #8d8d8d;
+}
+.footer-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 80px;
+}
+.footer ul {
+    list-style-type: none;
+}
+.footer li:not(.li-hed) {
+    line-height: 1em;
+    margin-top: 12px;
+    color: #ccc;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.footer li:not(.li-hed,.ang):hover {
+    text-decoration: underline;
+}
+.li-hed {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1em;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.ang {
+    font-size: 1.3em;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+.ang:hover {
+    text-decoration: none;
+}
+.footer-ii {
+    background-color: #232F3E;
+    margin-bottom: 80px;
+}
+#footer-li-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    padding: 30px 0;
+}
+.glob-pref {
+    gap: 7px;
+    align-items: center;
+}
+.glob-pref a:not(.learn) {
+    text-decoration: none;
+    color: #ddd;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 1em;
+    font-style: normal;
+    border: thin solid #8f8f8f;
+    border-radius: 3px;
+    padding: 4px;
+    cursor: pointer;
+}
+.glob-pref a:hover {
+    text-decoration: none;
+}
+.lang-drop {
+    position: relative;
+    display: inline-block;
+}
+.lang-drop:hover .drop-mnu {
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 150%;
+    transition: all 3s ease-in-out 3s;
+}
+.drop-mnu {
+    background-color: #fff;
+    width: 240px;
+    padding: 10px 30px;
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    list-style-type: disc;
+    display: none;
+}
+.drop-mnu::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 37%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #fff;
+}
+.drop-mnu li {
+    cursor: pointer;
+}
+.cr {
+    position: relative;
+    vertical-align: middle;
+    font-size: 5px;
+    color: #8d8d8d;
+}
+.fa-caret-up {
+    align-items: top;
+    margin-left: -10px;
+    margin-top: -12px;
+}
 
 
 
