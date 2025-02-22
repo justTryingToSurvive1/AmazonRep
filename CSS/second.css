@@ -296,13 +296,14 @@ footer button:hover a {
 }
 .drop-mnu {
     background-color: #fff;
-    width: 240px;
-    padding: 10px 30px;
+    width: 230px;
+    padding: 10px;
+    border-radius: 1px;
     font-family: "Nunito", serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    list-style-type: disc;
+    list-style-type: none;
     display: none;
 }
 .drop-mnu::before {
@@ -315,9 +316,51 @@ footer button:hover a {
     border-style: solid;
     border-color: transparent transparent #fff;
 }
-.drop-mnu li {
+.drop-mnu label {
     cursor: pointer;
 }
+.drop-mnu label:hover {
+    text-decoration: underline;
+    color: #E06019;
+}
+.drop-mnu label:hover .op::after {
+    opacity: 0.5;
+}
+
+.drop-mnu input[type="radio"] {
+    appearance: none;
+    position: absolute;
+}
+.drop-mnu .custom-check {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+.drop-mnu .custom-radio input[type="radio"]:checked + .custom-check {
+    border-color: #8d8d8d;
+}
+.drop-mnu .custom-radio input[type="radio"]:checked + .custom-check::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    background-color: #E06019;
+    border-radius: 50%;
+}
+.drop-mnu .op::after {
+    opacity: 0;
+}
+
 .cr {
     position: relative;
     vertical-align: middle;
