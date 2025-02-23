@@ -28,7 +28,7 @@
 </head>
 <body>
     <header>
-        <nav class="bg-success">
+        <nav class="">
             <div class="nav-1 ">
                 <div class="brand-logo">
 
@@ -42,8 +42,8 @@
             <div class="nav-2">
                 <div class="search-wrap">
                     <form action="#">
-                        <div class="dropdown btn-default d-inline-block">
-                            <a href="#" role="button" class="btn py-1 btn-default dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">All</a>
+                        <div class="dropdown btn-default">
+                            <a href="#" role="button" class="btn btn-default dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"  aria-expanded="false">All</a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-item">
                                     All Departments
@@ -75,7 +75,7 @@
                                 <li class="dropdown-item">Video Games</li>
                                 <li class="dropdown-item">Women's Fashion</li>
                             </ul>
-                            <span><input type="text" placeholder="Search Amazon"  style="padding: 4.5px; margin-left: -6px; height: 100%; width: 400px; border: 1.5px solid transparent;"></span>
+                            <input type="text" placeholder="Search Amazon">
                             <span class="s-pan"><i class="bi bi-search"></i></span>
                         </div>
                         <!-- <input aria-label="default input" type="text" placeholder="">-->
@@ -85,8 +85,8 @@
             <div id="nav-3">
                 <div class="nav-3-inner">
                     <div class="g-p">
-                        <div class="lang-drop"><a href="#" role="button"><img src="./MULTIMEDIA/Images/usaFlag.png" width="22" height="15" style="margin-top: -5px;" alt=""> EN <i class="fa-solid fa-caret-down cr"></i></a>
-                            <ul class="drop-mnu drop-mnu-tp">
+                        <div class="lang-drp"><a href="#" role="button"><img src="./MULTIMEDIA/Images/usaFlag.png" width="22" height="15" style="margin-top: -5px;" alt=""> EN <i class="fa-solid fa-caret-down cr"></i></a>
+                            <ul class="drop-mn drop-mnu-tp">
                                 <li>Choose language <a href="#" class="learn">Learn more</a></li>
                                 <li>
                                     <label class="custom-radio">
@@ -144,12 +144,12 @@
                                 </li>
                                 <hr>
                                 <li>Change Currency <a href="#" class="learn">Learn more</a></li>
-                                <li>$ - USD - US Dollar <span class="text-primary ms-1">Change</span></li>
+                                <li>$ - USD - US Dollar <span class="text-primary ms-1" style="cursor: pointer;">Change</span></li>
                                 <hr>
-                                <li>
+                                <li style="line-height: 1rem;">
                                     <img src="./MULTIMEDIA/Images/usaFlag.png" width="22" height="15" style="margin-top: -5px;" alt=""> You are shopping on Amazon.com
                                 </li>
-                                <p class="text-primary text-center">Change country/region</p>
+                                <p class="text-primary text-center" style="cursor: pointer;">Change country/region</p>
                             </ul>
                         </div>
                     </div>
@@ -208,6 +208,68 @@
             </div>
         </nav>
     </header>
+    <div id="sec-nav">
+        <div class="sec-nav-dir">
+           <a href="#" role="button">
+            <i class="bi bi-list"></i>
+            <span> All </span>
+            <div>
+
+            </div>
+           </a>
+           
+        </div>
+        <div class="sec-nav-tp">
+            <div class=" rounded-5 my-2 px-2">
+                <span><svg width="17" height="12" viewBox="0 0 17 14" class="align-middle" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.5584 7.02487C10.6303 7.02487 9.06812 8.58494 9.06812 10.5096C9.06812 12.4343 10.4978 13.8576 12.3092 13.9856C12.3899 14.018 15.2208 13.9856 15.3138 13.9856C15.7017 13.9856 16.0159 13.6718 16.0159 13.2844C16.0159 13.195 16.0637 10.2677 16.0329 10.1888C15.8706 8.41491 14.3769 7.02487 12.5584 7.02487Z" fill="#23A4BA"></path>
+                    <path d="M9.76518 4.88643C9.76518 2.18704 7.58108 0 4.88654 0C2.192 0 0.19932 2.00151 0.0201754 4.53749C-0.0252244 4.65053 0.0201698 8.61374 0.0201698 8.74398C0.0201698 9.28705 0.459449 9.72692 1.00179 9.72692C1.12695 9.72692 5.2252 9.79376 5.33563 9.75075C7.81912 9.52345 9.76518 7.43225 9.76518 4.88643Z" fill="#FF6200"></path>
+                    <path d="M13.9291 5.06655C13.8352 5.24374 13.5813 5.24374 13.4874 5.06655L12.8347 3.83549C12.8113 3.7913 12.7751 3.75515 12.7309 3.73172L11.4999 3.07903C11.3227 2.98509 11.3227 2.73123 11.4999 2.63728L12.7309 1.9846C12.7751 1.96117 12.8113 1.92502 12.8347 1.88083L13.4874 0.649768C13.5813 0.472574 13.8352 0.472574 13.9291 0.649768L14.5818 1.88083C14.6052 1.92502 14.6414 1.96117 14.6856 1.9846L15.9166 2.63728C16.0938 2.73123 16.0938 2.98509 15.9166 3.07903L14.6856 3.73172C14.6414 3.75515 14.6052 3.7913 14.5818 3.83549L13.9291 5.06655Z" fill="#054B59"></path>
+                  </svg></span>
+                <div class="fw-bold align-bottom">
+                     Rufus
+                </div>
+            </div>
+        </div>
+        <div class="options-container align-center">
+            <button class="btn fw-semibold px-1">
+               Today's Deals
+            </button>
+            <button class="btn fw-semibold px-1">
+                Sell
+            </button>
+            <button class="btn fw-semibold px-1">
+                Gift Cards
+            </button>
+            <button class="btn fw-semibold px-1">
+                Registry
+            </button>
+            <button class="btn fw-semibold px-1">
+                Buy Again
+            </button>
+            <button class="btn fw-semibold px-1">
+                jake's Amazon.com
+            </button>
+            <button class="btn fw-semibold px-1">
+                Customer Services
+            </button>
+            <button class="btn br-his fw-semibold px-1">
+                Browsing History <i class="bi bi-caret-down-fill"></i>
+               <div class="br-his-dd-wrap">
+                <div class="br-his-drop-dwn">
+                    <div>
+                        <span>Your Browsing History</span>
+                        <a href="#">View and Edit</a>
+                    </div>
+                    <div>
+                        <h3>Your shopping history is empty</h3>
+                        <p>Check back here to see items you shop for on any device.</p>
+                    </div>
+                </div>
+               </div>
+            </button>
+        </div>
+    </div>
     <!-- <header>
         <nav class="navbar navbar-expand-lg navbar-dark border-0" style="background-color: #131921; width: 100vw;">
             <div class="container-fluid justify-content-between">
@@ -265,6 +327,8 @@
                         </p>
                         <div class="toggle-container">
                             <!-- Hidden Content -->
+                            
+                            
                             <!-- <div class="toggle-content" id="toggleContent">
                               <div class="dropdown-option">
                                 <div class="dropdown-header" onclick="toggleDropdown(this)">
@@ -752,9 +816,9 @@
                 </div>
                 <div class="text-light d-flex" style="padding-right: -1.25rem; margin-left: 80px;">
                     <span class="fw-bold mx-2">jake -->
-                     <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"  fill="#fff" height="10"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></span>
+                     <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"  fill="#f0f" height="10"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></span>
                     </span>
-                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15" fill="#fff"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z"/></svg></span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15" fill="#f0f"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z"/></svg></span>
                     <!-- <div class="mx-3">
                         <?xml version="1.0" ?><svg height="24" viewBox="0 0 24 24" width="" height="" fill="#fff" style="font-size: 60px;" xmlns="http://www.w3.org/2000/svg"><path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"/><circle cx="10.5" cy="19.5" r="1.5"/><circle cx="17.5" cy="19.5" r="1.5"/></svg> 
                     </div>
@@ -885,38 +949,7 @@
 
                       </div>
                 </div>
-                <div>
-                    <div class="bg-light d-flex rounded-5 my-2 px-2">
-                        <span><svg width="17" height="12" viewBox="0 0 17 14" class="align-middle" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.5584 7.02487C10.6303 7.02487 9.06812 8.58494 9.06812 10.5096C9.06812 12.4343 10.4978 13.8576 12.3092 13.9856C12.3899 14.018 15.2208 13.9856 15.3138 13.9856C15.7017 13.9856 16.0159 13.6718 16.0159 13.2844C16.0159 13.195 16.0637 10.2677 16.0329 10.1888C15.8706 8.41491 14.3769 7.02487 12.5584 7.02487Z" fill="#23A4BA"></path>
-                            <path d="M9.76518 4.88643C9.76518 2.18704 7.58108 0 4.88654 0C2.192 0 0.19932 2.00151 0.0201754 4.53749C-0.0252244 4.65053 0.0201698 8.61374 0.0201698 8.74398C0.0201698 9.28705 0.459449 9.72692 1.00179 9.72692C1.12695 9.72692 5.2252 9.79376 5.33563 9.75075C7.81912 9.52345 9.76518 7.43225 9.76518 4.88643Z" fill="#FF6200"></path>
-                            <path d="M13.9291 5.06655C13.8352 5.24374 13.5813 5.24374 13.4874 5.06655L12.8347 3.83549C12.8113 3.7913 12.7751 3.75515 12.7309 3.73172L11.4999 3.07903C11.3227 2.98509 11.3227 2.73123 11.4999 2.63728L12.7309 1.9846C12.7751 1.96117 12.8113 1.92502 12.8347 1.88083L13.4874 0.649768C13.5813 0.472574 13.8352 0.472574 13.9291 0.649768L14.5818 1.88083C14.6052 1.92502 14.6414 1.96117 14.6856 1.9846L15.9166 2.63728C16.0938 2.73123 16.0938 2.98509 15.9166 3.07903L14.6856 3.73172C14.6414 3.75515 14.6052 3.7913 14.5818 3.83549L13.9291 5.06655Z" fill="#054B59"></path>
-                          </svg></span>
-                        <div class="fw-bold align-bottom">
-                             Rufus
-                        </div>
-                    </div>
-                </div>
-                <div class="options-container align-center">
-                    <button class="btn text-light fw-semibold px-1">
-                       Today's Deals
-                    </button>
-                    <button class="btn text-light fw-semibold px-1">
-                       Buy Again
-                    </button>
-                    <button class="btn text-light fw-semibold px-1">
-                        Customer Services
-                    </button>
-                    <button class="btn text-light fw-semibold px-1">
-                        Gift Cards
-                    </button>
-                    <button class="btn text-light fw-semibold px-1">
-                        Registry
-                    </button>
-                    <button class="btn text-light fw-semibold px-1">
-                        Sell
-                    </button>
-                </div>
+               
             </div> -->
         
         
