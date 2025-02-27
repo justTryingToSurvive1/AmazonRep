@@ -97,4 +97,26 @@
     });
  });
 
+ function openNav() {
+  document.getElementById("sideInner").style.transform = 'translateX(-0)';
+ }
+ function closeNav() {
+  document.getElementById("sideInner").style.transform = 'translateX(350px)' ;
+ }
+ 
+
+ function moveNavIn() {
+  document.getElementById("moveInner").style.transform = 'translateX(0)';
+ }
+ function moveNav() {
+  document.getElementById("moveInner").style.transform = 'translateX(350px)';
+ }
+
+ function movethNav() {
+  document.getElementById("moverInner").style.transform = 'translateX(0)';
+ }
+ function moverNavIn() {
+  document.getElementById("moverInner").style.transform = 'translateX(350px)';
+ }
+
  
