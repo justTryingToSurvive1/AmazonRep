@@ -17,7 +17,7 @@ header {
 }
 nav {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     justify-content: space-between;
     padding: 5px 20px;
 }
@@ -30,9 +30,9 @@ nav {
 }
 .brand-logo {
     background-image: url(../MULTIMEDIA/Images/new-nav-sprite-global-2x_blueheaven-privacy._CB541719889_.png);
-    background-size: 350px;
-    width: 110px;
-    height: 50px;
+    background-size: 21.875em;
+    width: 6.875em;
+    height: 3.125em;
     background-position: -10px 585px;
 }
 .loc {
@@ -348,9 +348,9 @@ nav {
 }
 .ama-cart {
     background-image: url(../MULTIMEDIA/Images/new-nav-sprite-global-2x_blueheaven-privacy._CB541719889_.png);
-    background-size: 350px;
-    width: 60px;
-    height: 45px;
+    background-size: 21.875em;
+    width: 3.75em;
+    height: 2.8125em;
     margin-top: -5px;
     background-position: -10px -295px;
 }
@@ -363,6 +363,7 @@ nav {
     align-items: center;
     padding: 0 20px;
     margin-top: 65px;
+    width: 100%;
 }
 .sec-nav-dir {
     font-weight: 750;
@@ -866,12 +867,27 @@ main h3 {
     background-color: #fff;
     padding: 10px;
 }
-#sec3,#sec5,#sec6,#sec7,#sec8,#sec10 {
+#sec3 {
     width: 100%;
     position: relative;
     background-color: #fff;
     margin: 20px 0;
     padding: 10px 0;
+}
+#sec5,#sec6,#sec8,#sec10 {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 10px 0;
+}
+#sec7 {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 10px 0;
+    display: flex;
 }
 #sec3:hover .scroll-button {
     opacity: 1;
@@ -955,7 +971,7 @@ main h3 {
     right: 0;
     color: #000;
 }
-#sec4,#sec7 {
+#sec4{
     display: flex;
     background-color: transparent;
     margin: 10px ;
@@ -987,7 +1003,6 @@ main h3 {
     background-color: transparent;
     width: 100%;
     justify-content: center;
-    /* padding: 0 20px; */
 }
 #sec9 .sec9-- .sec9-1 {
     background-image: url(../MULTIMEDIA/Images/Gaming_zone_2x._SY608_CB540253513_.jpg);
@@ -1332,7 +1347,15 @@ footer button:hover a {
 .footer-cl a:hover {
     text-decoration: underline;
 }
-
+.ads {
+    background-image: url(../MULTIMEDIA/Images/ads-privacy-img.png);
+    width: 40px;
+    height: 20px;
+    margin-left: -5px;
+    background-size: cover;
+    background-position: center -52px;
+    display: inline-block; 
+}
 
 
 
@@ -1340,9 +1363,55 @@ footer button:hover a {
 
 
 /**===========================**/
-@media (min-width: 992px) {
-    .options-container {
-        display: block;
-        /* transform: translateY(50px); */
+@media (max-width: 1200px) {
+    nav {
+        font-size: 1em;
+    }
+    #sec-nav {
+        margin-top: 80px;
     }
 }
+@media (max-width: 992px) {
+    nav {
+        width: 100%;
+        gap: 0;
+        justify-content: center;
+    }
+    #sec-nav {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .g-p {
+        display: none;
+    }
+    .search-wrap {
+        max-width: 90%;
+    }
+    .loc {
+        display: none;
+    }
+    #sec1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .nav-2 {
+        /* border: 2px solid blue;
+        position: absolute;
+        top: 200%;
+        width: 100%;
+        left: 0; */
+    }
+    .sec-nav-dir {
+        /* position: absolute;
+        bottom: -4500px;
+        left: 0; */
+    }
+}
+
+/* @media (min-width: 992px) {
+    
+    .options-container {
+        display: block;
+    }
+    
+} */

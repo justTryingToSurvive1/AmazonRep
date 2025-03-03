@@ -800,6 +800,7 @@ nav {
     font-style: normal;
     font-optical-sizing: auto;
 }
+/**===============FOOTER===========**/
 footer button {
     padding: 10px;
     width: 100%;
@@ -1086,7 +1087,15 @@ footer button:hover a {
 .footer-cl a:hover {
     text-decoration: underline;
 }
-
+.ads {
+    background-image: url(../MULTIMEDIA/Images/ads-privacy-img.png);
+    width: 40px;
+    height: 20px;
+    margin-left: -5px;
+    background-size: cover;
+    background-position: center -52px;
+    display: inline-block; 
+}
 
 
 
@@ -1117,6 +1126,10 @@ footer button:hover a {
     .cl {
         font-weight: 500;
         margin-bottom: 20px;
+        width: 100%;
+    }
+    .footer-wrap {
+        gap: 40px;
     }
 }
 @media (max-width: 768px) {
@@ -1130,5 +1143,36 @@ footer button:hover a {
     }
     .cl {
         font-weight: 500;
+    }
+    .t-s-btm-inner {
+        display: block;
+    }
+    .side-menu {
+        display: none;
+    }
+    .footer-wrap {
+        display: block;
+        text-align: center;
+    }
+    .footer-wrap li:not(.li-hed) {
+        display: none;
+    }
+}
+@media (max-width: 630px) {
+    #footer-li-wrap {
+        display: block;
+        text-align: center;
+    }
+    .glob-pref {
+        align-self: center;
+        /* display: block; */
+    }
+    .lang-drop {
+        /* border: none; */
+    }
+}
+@media (max-width: 568px) {
+    .t-s-cntnt {
+        display: block;
     }
 }
